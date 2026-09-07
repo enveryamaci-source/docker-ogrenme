@@ -1,0 +1,18 @@
+name: Docker Uretim Bandi
+
+# 1. TETİKLEYİCİ: Bu robot ne zaman çalışsın?
+on:
+  push:
+    branches: [ "main" ] # Biri 'main' dalına kod gönderdiğinde uyan!
+
+# 2. GÖREVLER: Robot uyandığında ne yapsın?
+jobs:
+  kapsulu-uret:
+    runs-on: ubuntu-latest # GitHub'ın bize bedava verdiği temiz bir Linux makinesi
+
+    steps:
+    - name: 1. Kodu Depodan Al
+      uses: actions/checkout@v3
+
+    - name: 2. Docker Kapsulunu Uret (Build)
+      run: docker build -t benim-kapsulum .
