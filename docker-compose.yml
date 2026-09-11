@@ -16,8 +16,7 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: ${DB_SIFRE}
       POSTGRES_DB: oyun_verileri
-    ports:
-      - "5432:5432"
+    
     volumes:
       - db_data:/var/lib/postgresql/data
 
