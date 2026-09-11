@@ -19,7 +19,7 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
       
-   nginx:
+  nginx:
     image: nginx:latest
     ports:
       - "80:80"
